@@ -18,58 +18,24 @@ The values I decided to produce were all filtering through books that has a tie 
 - How was the data collected or generated? This data was collected every month through checkouts using titles. 
 - Why was the data collected? This data is collected to see trends about how/what the people of Seattle are reading. 
 - What, if any, ethical questions do you need to consider when working with this data? A question I would have is if the people checking out these books know that their choices in books are being shared publicly?
-- What are possible limitations or problems with this data?   (at least 200 words)
-A main limitation can be that this data is updated monthly. This will mean that someone who wanted to access the data for the recent month would have to wait until the next month to be able to see it. I also noticed that there were a lot of missing data in some sections of ISBN, Creator, Subjects, Publisher and Publication Year. Having missing data can cause problems, even in such a big dataset. The missing data can create imbalances to the observations and can lead to a wrong conclusion. Although many people check out certain books or maybe multiple at a time, it can be unsure that after checkout they will actually read them. Or if someone is taking longer to read, which would require them to check out the same book multiple times. Both of those situations can also mess with some of the data. When it comes to authors, some of the names read last name to first name or vice versa. This creates the problem when having to search through authors and their names are flopped. Also looking deeper into the Author column, I can see that some authors have dates next to their name which may indicate their death or birth year, which could be useless in the context of this dataset and makes it harder to search through. 
+- What are possible limitations or problems with this data?   (at least 200 words) A main limitation can be that this data is updated monthly. This will mean that someone who wanted to access the data for the recent month would have to wait until the next month to be able to see it. I also noticed that there were a lot of missing data in some sections of ISBN, Creator, Subjects, Publisher and Publication Year. Having missing data can cause problems, even in such a big dataset. The missing data can create imbalances to the observations and can lead to a wrong conclusion. Although many people check out certain books or maybe multiple at a time, it can be unsure that after checkout they will actually read them. Or if someone is taking longer to read, which would require them to check out the same book multiple times. Both of those situations can also mess with some of the data. When it comes to authors, some of the names read last name to first name or vice versa. This creates the problem when having to search through authors and their names are flopped. Also looking deeper into the Author column, I can see that some authors have dates next to their name which may indicate their death or birth year, which could be useless in the context of this dataset and makes it harder to search through. 
 
 ### First Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
+This chart compares how much checkouts of physical compared to digital are. I wanted to capture the decline of physical books continuing forward after the pandemic.The pattern that emerges is that books are at an all time high at the beginning of 2022 and start declining. There is a big difference in 2022 compared to 2023. But there is a big difference between digital and physical. Digital has a big drop compared to physical overtime. 
 
 ``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1.R")}
 ```
 
 ### Second Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
+Using the summary information found, ebooks were the most popular, while audiobooks were the least. I wanted to see how different the checkout rates were compared to each other. This chart shows the checkout rates monthly to get the best idea of ratio. I was honestly surprised because comparing least to most popular I would assume there would be a big difference. They were both at almost near identical rates. But it's seen that ebooks were up about 1000 checkouts every month versus audiobooks. 
 
 ``````{r, echo = FALSE, code = readLines("chart2.R")}
 ```
 
 ### Your Choice
-
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
+After seeing the first chart about yearly, I was enticed to see what difference was for months. This chart shows 2022 and 2023 months combined. I chose a scatter plot because I thought it was the best way to able to see checkouts more individually. This is really interesting because some physical books actually topped digital on the y-axis. But in the end you can see the contrast of colors where digital takes over most of the chart. 
 
 ``````{r, echo = FALSE, code = readLines("extra_chart.R")}
 ```

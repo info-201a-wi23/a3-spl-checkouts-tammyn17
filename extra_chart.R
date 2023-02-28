@@ -15,7 +15,7 @@ mystery_3_data <- spl_data %>%
                    color = UsageClass)) +
     labs(title = "Mystery Books Checked Out Each Month",
          x = "Checkout Month",
-         y = "Total Checkouts",
+         y = "Checkouts",
          color = "Usage Class") +
   scale_x_continuous(breaks = seq(1, 12))
   

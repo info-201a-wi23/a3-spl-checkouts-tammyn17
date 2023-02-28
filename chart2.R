@@ -18,6 +18,6 @@ ggplot(mystery_2_data) +
   labs(title = "Ebook vs. Audiobook Monthly Checkouts",
        x = "Checkout Month",
        y = "Total Checkouts",
-       color = "MaterialType") +
+       color = "Material Type") +
   scale_x_continuous(breaks = seq(1, 12))
 
