@@ -5,30 +5,21 @@ output: html_document
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+I chose to analyze the Seattle Public Library checkouts from the years 2022 to 2023. I picked this one because it is the most up to date dataset. My main goal on this is to provide data about digital copies with a focus on the genre mystery. I choose this because ever since the pandemic, I've noticed a lot of people aren't using paper copies anymore and were transitioning to technology. Myself, I only like digital books and I want to see how prevelant digital copies are. I've always enjoyed a good mystery book, so I decided to combine to two to research. 
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
-
-Feel free to calculate and report values that you find relevant.
+The values I decided to produce were all filtering through books that has a tie to mystery. I expected there to be a slight difference between physical copies and digital copies but the numbers suprised me. Digital had a whooping 679,811 checkouts while physical had only 89,628, which makes the difference of 590,183. Knowing that digital had a big consumer rate, the next value was going to be finding what kind of digital preference was most checked out. I found that Ebooks were a big contributer to the digital checkout, while audiobooks were the lowest. January was the most popular month that people where checking out digital books. Along with popularity, Agatha Christie was the top author for the genre and digital copies. 
 
 ### The Dataset
 
-- Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
+- Who collected/published the data?  The data was collected by the Seattle Public Library and is accessed through Seattle Open Data.
+- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)? UsageClass, CheckoutType, MaterialType, CheckoutYear, CheckoutMonth, Checkouts, Title, ISBN, Creator, Subjects, Publisher, PublicationYear
+- How was the data collected or generated? This data was collected every month through checkouts using titles. 
+- Why was the data collected? This data is collected to see trends about how/what the people of Seattle are reading. 
+- What, if any, ethical questions do you need to consider when working with this data? A question I would have is if the people checking out these books know that their choices in books are being shared publicly?
 - What are possible limitations or problems with this data?   (at least 200 words)
-
+A main limitation can be that this data is updated monthly. This will mean that someone who wanted to access the data for the recent month would have to wait until the next month to be able to see it. I also noticed that there were a lot of missing data in some sections of ISBN, Creator, Subjects, Publisher and Publication Year. Having missing data can cause problems, even in such a big dataset. The missing data can create imbalances to the observations and can lead to a wrong conclusion. Although many people check out certain books or maybe multiple at a time, it can be unsure that after checkout they will actually read them. Or if someone is taking longer to read, which would require them to check out the same book multiple times. Both of those situations can also mess with some of the data. When it comes to authors, some of the names read last name to first name or vice versa. This creates the problem when having to search through authors and their names are flopped. Also looking deeper into the Author column, I can see that some authors have dates next to their name which may indicate their death or birth year, which could be useless in the context of this dataset and makes it harder to search through. 
 
 ### First Trends Over Time Chart
 

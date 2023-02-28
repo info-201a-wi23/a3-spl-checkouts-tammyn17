@@ -1,6 +1,8 @@
 library("dplyr")
 library("stringr")
 
+spl_data <- read.csv("~/Desktop/2022-2023-All-Checkouts-SPL-Data.csv", stringsAsFactors = FALSE)
+
 # How many digital copies vs hard copies were checked out and what is the difference?
 digital_copies <- spl_data %>% 
   filter(UsageClass == "Digital", str_detect(Subjects, "Mystery")) %>% 
@@ -38,14 +40,11 @@ top_author <- spl_data %>%
   filter(author_checkouts == max(author_checkouts)) %>% 
   pull(Creator)
 
-# What month and year had the most checkouts for digital?
-most_month_year <- spl_data %>% 
+# What month had the most checkouts for digital?
+most_month <- spl_data %>% 
   filter(UsageClass == "Digital", str_detect(Subjects, "Mystery")) %>% 
-  group_by(CheckoutYear, CheckoutMonth) %>% 
+  group_by(CheckoutMonth) %>% 
   summarize(date_checkouts = sum(Checkouts)) %>% 
-  arrange(desc(date_checkouts)) %>% 
-  head(1) %>% 
-  select(CheckoutYear, CheckoutMonth) 
-
-
+  filter(date_checkouts == max(date_checkouts)) %>% 
+  pull(CheckoutMonth)
 
