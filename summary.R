@@ -46,5 +46,6 @@ most_month <- spl_data %>%
   group_by(CheckoutMonth) %>% 
   summarize(date_checkouts = sum(Checkouts)) %>% 
   filter(date_checkouts == max(date_checkouts)) %>% 
-  pull(CheckoutMonth)
+  pull(CheckoutMonth) %>% 
+  month.name[.]
 

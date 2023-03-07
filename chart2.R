@@ -19,5 +19,5 @@ ggplot(mystery_2_data) +
        x = "Checkout Month",
        y = "Total Checkouts",
        color = "Material Type") +
-  scale_x_continuous(breaks = seq(1, 12))
+  scale_x_continuous(breaks = seq(1, 12), labels = month.abb)
 

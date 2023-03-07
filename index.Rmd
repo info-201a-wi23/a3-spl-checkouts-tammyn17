@@ -2,14 +2,16 @@
 title: "A3: SPL Library Checkouts"
 output: html_document
 ---
+```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines('summary.R')}
+```
 
 ### Introduction
 
-I chose to analyze the Seattle Public Library checkouts from the years 2022 to 2023. I picked this one because it is the most up to date dataset. My main goal on this is to provide data about digital copies with a focus on the genre mystery. I choose this because ever since the pandemic, I've noticed a lot of people aren't using paper copies anymore and were transitioning to technology. Myself, I only like digital books and I want to see how prevelant digital copies are. I've always enjoyed a good mystery book, so I decided to combine to two to research. 
+I chose to analyze the Seattle Public Library checkouts from the years 2022 to 2023. I picked this one because it is the most up to date dataset. My main goal on this is to provide data about digital copies with a focus on the genre mystery. I choose this because ever since the pandemic, I've noticed a lot of people aren't using paper copies anymore and were transitioning to technology. Myself, I only like digital books and I want to see how prevalent digital copies are. I've always enjoyed a good mystery book, so I decided to combine to two to research. 
 
 ### Summary Information
 
-The values I decided to produce were all filtering through books that has a tie to mystery. I expected there to be a slight difference between physical copies and digital copies but the numbers suprised me. Digital had a whooping 679,811 checkouts while physical had only 89,628, which makes the difference of 590,183. Knowing that digital had a big consumer rate, the next value was going to be finding what kind of digital preference was most checked out. I found that Ebooks were a big contributer to the digital checkout, while audiobooks were the lowest. January was the most popular month that people where checking out digital books. Along with popularity, Agatha Christie was the top author for the genre and digital copies. 
+The values I decided to produce were all filtering through books that has a tie to mystery. I expected there to be a slight difference between physical copies and digital copies but the numbers surprised me. Digital had a whooping `r digital_copies` checkouts while physical had only `r hard_copies`, which makes the difference of `r difference_copies`. Knowing that digital had a big consumer rate, the next value was going to be finding what kind of digital preference was most checked out. I found that `r form_of_most_copies` was a big contributor to the digital checkout, while `r form_of_least_copies` was the lowest. `r most_month` was the most popular month that people were checking out digital books. Along with popularity, `r top_author` was the top author for the genre and digital copies. 
 
 ### The Dataset
 
@@ -24,20 +26,20 @@ The values I decided to produce were all filtering through books that has a tie 
 
 This chart compares how much checkouts of physical compared to digital are. I wanted to capture the decline of physical books continuing forward after the pandemic.The pattern that emerges is that books are at an all time high at the beginning of 2022 and start declining. There is a big difference in 2022 compared to 2023. But there is a big difference between digital and physical. Digital has a big drop compared to physical overtime. 
 
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1.R")}
+```{r, echo = FALSE, warning = FALSE, code = readLines("chart1.R"), message = FALSE}
 ```
 
 ### Second Trends Over Time Chart
 
 Using the summary information found, ebooks were the most popular, while audiobooks were the least. I wanted to see how different the checkout rates were compared to each other. This chart shows the checkout rates monthly to get the best idea of ratio. I was honestly surprised because comparing least to most popular I would assume there would be a big difference. They were both at almost near identical rates. But it's seen that ebooks were up about 1000 checkouts every month versus audiobooks. 
 
-``````{r, echo = FALSE, code = readLines("chart2.R")}
+```{r, echo = FALSE, code = readLines("chart2.R"), warning = FALSE, message = FALSE}
 ```
 
 ### Your Choice
-After seeing the first chart about yearly, I was enticed to see what difference was for months. This chart shows 2022 and 2023 months combined. I chose a scatter plot because I thought it was the best way to able to see checkouts more individually. This is really interesting because some physical books actually topped digital on the y-axis. But in the end you can see the contrast of colors where digital takes over most of the chart. 
+After seeing the first chart about yearly, I was enticed to see what difference was for months. This chart shows 2022 and 2023 months combined. I chose a stacked bar plot because I thought it was the best way for grouping when categorizing by months and it's able to showcase the two checkout comparisons better. This is really interesting because you can see how January was the most checked out for both and then the rest of the months it starts to straighten out. But in the end you can see the contrast of colors where digital takes over most of the chart. 
 
-``````{r, echo = FALSE, code = readLines("extra_chart.R")}
+```{r, echo = FALSE, code = readLines("extra_chart.R"), warning = FALSE, message = FALSE}
 ```
 
 

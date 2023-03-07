@@ -8,8 +8,8 @@ spl_data <- read.csv("~/Desktop/2022-2023-All-Checkouts-SPL-Data.csv", stringsAs
 mystery_1_data <- spl_data %>% 
   filter(UsageClass %in% c("Physical", "Digital")) %>% 
   filter(str_detect(Subjects, "Mystery")) %>% 
-  group_by(CheckoutYear, UsageClass) %>% 
-  summarize(Checkouts = sum(Checkouts))
+  group_by(CheckoutYear, UsageClass, .groups = "drop") %>% 
+  summarize(Checkouts = sum(Checkouts), .groups = "drop")
 
 ggplot(mystery_1_data) +
   geom_line(aes(x = CheckoutYear,
@@ -19,5 +19,7 @@ ggplot(mystery_1_data) +
        x = "Checkout Year",
        y = "Total Checkouts",
        color = "Usage Class") +
-  scale_y_continuous(breaks = seq(0, 1000000, by = 20000))
+  scale_y_continuous(breaks = seq(0, 1000000, by = 50000)) +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
 

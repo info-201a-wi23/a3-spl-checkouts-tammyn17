@@ -10,14 +10,14 @@ mystery_3_data <- spl_data %>%
   group_by(CheckoutMonth)
 
   ggplot(mystery_3_data) +
-    geom_point(aes(x = CheckoutMonth,
+    geom_col(aes(x = CheckoutMonth,
                    y = Checkouts,
-                   color = UsageClass)) +
+                   fill = UsageClass)) +
     labs(title = "Mystery Books Checked Out Each Month",
          x = "Checkout Month",
          y = "Checkouts",
-         color = "Usage Class") +
-  scale_x_continuous(breaks = seq(1, 12))
+         fill = "Usage Class") +
+    scale_x_continuous(breaks = seq(1, 12), labels = month.abb)
   
   
  
